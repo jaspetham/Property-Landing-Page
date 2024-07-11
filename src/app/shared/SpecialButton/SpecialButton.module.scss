@@ -102,3 +102,15 @@
  right: 0;
  width: 0;
 }
+
+@media  screen and (max-width:1024px) {
+    .fancy{
+        padding-left: 2em;
+    }
+    .fancy-text{
+        padding-left: 0;
+    }
+    .fancy::before{
+        display:none;
+    }
+}

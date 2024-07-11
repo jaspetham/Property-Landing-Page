@@ -34,7 +34,7 @@
   --fs-1000: 80px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1140px) {
   :root {
     --fs-100: 12px;
     --fs-150: 14px;
