@@ -1,0 +1,17 @@
+header{
+    background: transparent;
+}
+
+.logo{
+    margin-right: clamp(50px, 40vw, 150px);
+}
+
+@media  screen and (max-width:768px) {
+    .nav-wrapper{
+        display: none;
+    }
+
+    .logo{
+        margin-right: clamp(50px, 40vw, 50px);
+    }
+}
