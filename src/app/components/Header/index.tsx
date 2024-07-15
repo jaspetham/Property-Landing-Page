@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import './Header.css';
 import SpecialButton from "../../shared/SpecialButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
     const [openNav, setOpenNav] = useState(false);
@@ -13,7 +15,8 @@ const Header: React.FC = () => {
           <div className="text-lg font-bold flex justify-between logo">
             Freehold
           </div>
-          <nav className="nav-wrapper">
+          <nav className={(openNav ? 'active ' : '') + 'nav-wrapper'}>
+            <button className="close-menu fs-700" onClick={()=>setOpenNav(false)}><FontAwesomeIcon icon={faCircleXmark}/></button>
             <ul className="flex gap-6 font-bold uppercase">
               <li>
                 <a href="/" className="hover:text-gray-400">
