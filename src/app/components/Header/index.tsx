@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Header.css';
 import SpecialButton from "../../shared/SpecialButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,49 +8,57 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
     const [openNav, setOpenNav] = useState(false);
+    const [data, setData] = useState<any>(null);
+     useEffect(() => {
+        async function fetchData() {
+          try {
+            const response = await fetch("/api/header");
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const result = await response.json();
+            setData(result);
+          } catch (error) {
+            console.error("Failed to fetch data:", error);
+          }
+        }
+
+       fetchData();
+     }, []);
+
   return (
     <header className="p-4">
       <div className="mx-auto flex justify-between items-center gap-4">
         <div className="header-left  flex justify-between items-center">
-          <div className="text-lg font-bold flex justify-between logo">
-            Freehold
-          </div>
-          <nav className={(openNav ? 'active ' : '') + 'nav-wrapper'}>
-            <button className="close-menu fs-700" onClick={()=>setOpenNav(false)}><FontAwesomeIcon icon={faCircleXmark}/></button>
-            <ul className="flex gap-6 font-bold uppercase">
-              <li>
-                <a href="/" className="hover:text-gray-400">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-gray-400">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/facilities" className="hover:text-gray-400">
-                  Facilities
-                </a>
-              </li>
-              <li>
-                <a href="/floor-plans" className="hover:text-gray-400">
-                  Floor Plans
-                </a>
-              </li>
-              <li>
-                <a href="/location" className="hover:text-gray-400">
-                  Location
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-gray-400">
-                  Contact
-                </a>
-              </li>
-            </ul>
+          {data?.mainTitle && (
+            <div className="text-lg font-bold flex justify-between logo">
+              {data.mainTitle}
+            </div>
+          )}
+          <nav className={(openNav ? "active " : "") + "nav-wrapper"}>
+            <button
+              className="close-menu fs-700"
+              onClick={() => setOpenNav(false)}
+            >
+              <FontAwesomeIcon icon={faCircleXmark} />
+            </button>
+            {data?.navs?.length > 0 && (
+              <ul className="flex gap-6 font-bold uppercase">
+                {data.navs.map((navItem: { link: string; title: string }) => (
+                  <li key={navItem.link}>
+                    <a href={navItem.link} className="hover:text-gray-400">
+                      {navItem.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </nav>
-          <div onClick={() => setOpenNav(!openNav)} id="nav-icon3" className={openNav ? 'open' : ''}>
+          <div
+            onClick={() => setOpenNav(!openNav)}
+            id="nav-icon3"
+            className={openNav ? "open" : ""}
+          >
             <span></span>
             <span></span>
             <span></span>

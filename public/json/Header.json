@@ -1,0 +1,29 @@
+{
+    "mainTitle": "Freehold",
+    "navs":[
+        {
+            "link":"/",
+            "title":"Home"
+        },
+        {
+            "link":"/about",
+            "title":"About"
+        },
+        {
+            "link":"/facilities",
+            "title":"Facilities"
+        },
+        {
+            "link":"/floor-plans",
+            "title":"Floor Plans"
+        },
+        {
+            "link":"/location",
+            "title":"Location"
+        },
+        {
+            "link":"/contact",
+            "title":"Contact"
+        }
+    ]
+}
