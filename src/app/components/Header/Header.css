@@ -9,7 +9,9 @@ header{
 #nav-icon3{
     display:none;
 }
-
+.close-menu{
+    display:none;
+}
 
 @media  screen and (max-width:768px) {
     .nav-wrapper{
@@ -34,6 +36,7 @@ header{
         position: absolute;
         right:10%;
         top:5%;
+        display:block;
     }
     .nav-wrapper > ul{
         display: flex;

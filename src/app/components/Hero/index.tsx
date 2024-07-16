@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     return (
       <section className="hero-banner">
         <div className="content w-3/4 flex items-center justify-center">
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full content-wrapper">
             <div className="title-wrapper flex flex-col justify-center gap-6">
               <div className="big-title ff-secondary">
                 <h1 className="title fs-1000">The Last</h1>
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                 <p className="uppercase fs-100">Starting from</p>
                 <h1 className="price my-5">MYR 410,000</h1>
                 <MainButton text={"Take a tour"} />
-                <div className="flex gap-3">
+                <div className="flex gap-3 contact-me">
                   <p className="fs-100">Contact Me</p>
                   <a
                     href="https://api.whatsapp.com/send?phone=60164928027&text=Hi I am interested in Nara Project"
