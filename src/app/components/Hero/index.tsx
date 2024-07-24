@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import MainButton from "@/app/shared/MainButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const Hero: React.FC = () => {
   const [data, setData] = useState<any>(null);
@@ -35,7 +36,7 @@ const Hero: React.FC = () => {
             <div className="address p-4 px-8 flex items-center  gap-3">
               <FontAwesomeIcon
                 className="fs-200"
-                icon={["fas", "location-dot"]}
+                icon={faLocationDot}
               />
               <p className="fs-200">{data?.location}</p>
             </div>
