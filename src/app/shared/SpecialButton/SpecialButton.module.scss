@@ -107,15 +107,10 @@
     .fancy{
         padding-left: 2em;
     }
-    .fancy-text{
+    .fancy .text{
         padding-left: 0;
     }
     .fancy::before{
         display:none;
-    }
-}
-@media  screen and (max-width:768px) {
-    .fancy .text{
-        padding-left: 0;
     }
 }
