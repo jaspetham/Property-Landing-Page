@@ -1,5 +1,4 @@
 .hero-banner {
-  background-image: url('/assets/hero.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh; /* Adjust the height as needed */
@@ -11,10 +10,17 @@
   position: relative;
   left:0;
   top:0;
-  width: 100vw;
-  z-index: -1;
+  width: 100%;
+  z-index: 1;
 }
 
+.mask {
+  --mask:
+    radial-gradient(60.96px at 50% calc(100% - 86px),#000 99%,#0000 101%) calc(50% - 80px) 0/160px 100%,
+    radial-gradient(60.96px at 50% calc(100% + 46px),#0000 99%,#000 101%) 50% calc(100% - 40px)/160px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
 .hero-banner::before {
   content: '';
   position: absolute;

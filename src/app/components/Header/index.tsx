@@ -8,6 +8,7 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
     const [openNav, setOpenNav] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const [data, setData] = useState<any>(null);
      useEffect(() => {
         async function fetchData() {
@@ -24,11 +25,25 @@ const Header: React.FC = () => {
         }
 
        fetchData();
+
+        const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 200) { // Change 200 to the pixel value you want
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
      }, []);
 
   return (
-    <header className="p-4">
-      <div className="mx-auto flex justify-between items-center gap-4">
+    <header className={`p-4${scrolled ? ' scrolled' : ''}`}>
+      <div className="container mx-auto flex justify-between items-center gap-4">
         <div className="header-left  flex justify-between items-center">
           {data?.mainTitle && (
             <div className="text-lg font-bold flex justify-between logo">

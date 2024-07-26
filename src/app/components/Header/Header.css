@@ -3,6 +3,12 @@ header{
     position: fixed;
     top:0;
     width:100%;
+    z-index: 10;
+    transition: background .5s ease-in;
+}
+
+header.scrolled{
+    background: var(--primary-color);
 }
 
 .logo{
@@ -16,7 +22,7 @@ header{
     display:none;
 }
 
-@media  screen and (max-width:768px) {
+@media  screen and (max-width:1140px) {
     .nav-wrapper{
         position: absolute;
         display: flex;

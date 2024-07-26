@@ -8,6 +8,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --primary-color:#103a40;
+  --font-color:#3393a1;
   --accent-color: #ccb8a3;
   --ff-primary:"Roboto", sans-serif;
   --ff-secondary:"Playfair Display", serif;
@@ -233,4 +234,14 @@ h6 {
 .fs-900 { font-size: var(--fs-900); }
 .fs-950 { font-size: var(--fs-950); }
 .fs-1000 { font-size: var(--fs-1000); }
+
+.clr-primary{
+    color:var(--primary-color);
+}
+.clr-font{
+    color:var(--font-color);
+}
+.clr-accent{
+    color:var(--accent-color);
+}
 

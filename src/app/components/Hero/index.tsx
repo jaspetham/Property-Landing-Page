@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     fetchData();
   }, []);
   return (
-    <section className="hero-banner">
+    <section className="hero-banner mask"style={{ backgroundImage: data ? `url(${data.heroImg})` : 'none' }}>
       <div className="content w-3/4 flex items-center justify-center">
         <div className="flex justify-between w-full content-wrapper">
           <div className="title-wrapper flex flex-col justify-center gap-6">
