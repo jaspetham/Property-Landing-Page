@@ -5,7 +5,7 @@ import Hero from "./components/Hero/index";
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
+    <main>
       <Header />
       <Hero />
       <About />
