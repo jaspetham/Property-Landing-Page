@@ -4,7 +4,7 @@ header{
     top:0;
     width:100%;
     z-index: 10;
-    transition: background .5s ease-in;
+    transition: background .25s ease-in;
 }
 
 header.scrolled{

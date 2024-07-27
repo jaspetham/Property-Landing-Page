@@ -2,5 +2,18 @@
     "squareFeet":5620,
     "bedrooms":6,
     "bathrooms":4,
-    "carPark":2
+    "carPark":2,
+    "aboutImg":"/assets/p1.jpg",
+    "subTitle":"Puchong Freehold",
+    "titles":[
+        "Natureʼs Tender",
+        "Embrace Whispers,",
+        "Evoking a Profound",
+        "Sense of Awe"
+    ],
+    "descs":[
+        "Experience the essence of Living by the Park, NARA at Shorea Park. Step into a world where nature meets urban living, creating ahaven for families of all kinds.",
+        "Embrace the tranquil beauty of nature-inspired community living as you embark on a new chapter filled with leisure, connection and comfort."
+    ]
+
 }

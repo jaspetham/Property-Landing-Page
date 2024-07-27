@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     fetchData();
   }, []);
   return (
-    <section className="hero-banner mask"style={{ backgroundImage: data ? `url(${data.heroImg})` : 'none' }}>
+    <section className="hero-banner"style={{ backgroundImage: data ? `url(${data.heroImg})` : 'none' }}>
       <div className="content w-3/4 flex items-center justify-center">
         <div className="flex justify-between w-full content-wrapper">
           <div className="title-wrapper flex flex-col justify-center gap-6">
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               <h1 className="title fs-1000">{data?.firstTitle}</h1>
               <h1 className="title fs-1000">{data?.secondTitle}</h1>
             </div>
-            <div className="address p-4 px-8 flex items-center  gap-3">
+            <div className="address rounded p-4 px-8 flex items-center  gap-3">
               <FontAwesomeIcon
                 className="fs-200"
                 icon={faLocationDot}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
               <p className="fs-200">{data?.location}</p>
             </div>
           </div>
-          <div className="price-wrapper">
+          <div className="price-wrapper rounded">
             <div className="flex flex-col justify-evenly">
               <p className="uppercase fs-100">Starting from</p>
               <h1 className="price my-5">{data?.startingPrice}</h1>

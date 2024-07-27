@@ -179,7 +179,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(34, 31, 30);
     color:var(--text-color);
     font-family: var(--ff-primary)!important;
 }
