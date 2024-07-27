@@ -25,7 +25,7 @@ const Facilities: React.FC = () => {
         fetchData();
       }, []);
     return (
-      <section className="py-8 container mx-auto bg-white">
+      <section id="facilities" className="pt-8 container mx-auto bg-white">
         <SectionTitle subtitle="highlights" title="Our Facilities" />
         <div className="px-6">
             <div className="flex flex-col gap-6 items-center py-6">

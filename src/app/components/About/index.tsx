@@ -23,7 +23,7 @@ const About: React.FC = () => {
        fetchData();
      }, []);
     return (
-      <section className="py-8 clr-font px-6">
+      <section id="about" className="py-8 clr-font px-6">
         <div className="flex justify-evenly py-5">
           <div className="info-wrapper">
             <h2 className="ff-p-bold">{data ? data.squareFeet : 0}</h2>

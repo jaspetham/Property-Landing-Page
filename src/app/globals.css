@@ -188,6 +188,10 @@
     position: absolute;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--dark-color);
     color:var(--text-color);

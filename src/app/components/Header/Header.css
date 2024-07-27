@@ -22,6 +22,10 @@ header.scrolled{
     display:none;
 }
 
+.header-link:hover{
+    color:var(--accent-color);
+}
+
 @media  screen and (max-width:1140px) {
     .nav-wrapper{
         position: absolute;

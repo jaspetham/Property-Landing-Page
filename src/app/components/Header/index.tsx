@@ -61,7 +61,7 @@ const Header: React.FC = () => {
               <ul className="flex gap-6 font-bold uppercase">
                 {data.navs.map((navItem: { link: string; title: string }) => (
                   <li key={navItem.link}>
-                    <a href={navItem.link} className="hover:text-gray-400">
+                    <a href={navItem.link} className="header-link">
                       {navItem.title}
                     </a>
                   </li>

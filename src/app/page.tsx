@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Facilities from "./components/Facilities";
+import Floorplans from "./components/Floorplans";
 import Header from "./components/Header/index";
 import Hero from "./components/Hero/index";
 
@@ -13,6 +14,7 @@ export default function Home() {
           <div className="mask"></div>
       </div>
       <Facilities />
+      <Floorplans/>
     </main>
   );
 }

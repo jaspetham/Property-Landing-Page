@@ -6,19 +6,19 @@
             "title":"Home"
         },
         {
-            "link":"/about",
+            "link":"#about",
             "title":"About"
         },
         {
-            "link":"/facilities",
+            "link":"#facilities",
             "title":"Facilities"
         },
         {
-            "link":"/floor-plans",
+            "link":"#floorplans",
             "title":"Floor Plans"
         },
         {
-            "link":"/location",
+            "link":"#location",
             "title":"Location"
         },
         {
