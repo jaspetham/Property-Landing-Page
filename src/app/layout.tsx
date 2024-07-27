@@ -4,7 +4,7 @@ import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import FontAwesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";
 import '../lib/fontawesome';
-import { Providers } from "./Providers";
+import { Providers } from "./providers";
 
 // Prevent FontAwesome from adding its CSS automatically
 config.autoAddCss = false;
