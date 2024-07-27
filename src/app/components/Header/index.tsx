@@ -42,8 +42,8 @@ const Header: React.FC = () => {
      }, []);
 
   return (
-    <header className={`p-4${scrolled ? ' scrolled' : ''}`}>
-      <div className="container mx-auto flex justify-between items-center gap-4">
+    <header className={`container mx-auto p-4${scrolled ? ' scrolled' : ''}`}>
+      <div className="flex justify-between items-center gap-4">
         <div className="header-left  flex justify-between items-center">
           {data?.mainTitle && (
             <div className="text-lg font-bold flex justify-between logo">

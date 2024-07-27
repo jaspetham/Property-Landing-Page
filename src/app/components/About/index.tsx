@@ -23,7 +23,7 @@ const About: React.FC = () => {
        fetchData();
      }, []);
     return (
-      <section className="py-8 container mx-auto clr-font px-6">
+      <section className="py-8 clr-font px-6">
         <div className="flex justify-evenly py-5">
           <div className="info-wrapper">
             <h2 className="ff-p-bold">{data ? data.squareFeet : 0}</h2>
@@ -45,7 +45,7 @@ const About: React.FC = () => {
         <hr className="line my-10" />
         <div className="about-main-wrapper gap-12 py-10">
           <div className="about-img-wrapper flex justify-center relative">
-            <Parallax translateY={[-10, 40]}>
+            <Parallax translateY={[-10, 20]}>
               <img className="img1" src={data?.aboutImg} alt="aboutImg" />
             </Parallax>
           </div>
@@ -56,9 +56,9 @@ const About: React.FC = () => {
             <h2 className="text-white ff-secondary uppercase leading-tight">
               {data &&
                 data.titles.length > 0 &&
-                data.titles.map((title: string) => {
+                data.titles.map((title: string,index:number) => {
                   return (
-                    <span>
+                    <span key={index}>
                       {title} <br />
                     </span>
                   );
@@ -67,8 +67,12 @@ const About: React.FC = () => {
             <div className="pt-5 flex flex-col gap-6">
                 {data &&
                   data.descs.length > 0 &&
-                  data.descs.map((desc: string) => {
-                    return <p className="clr-accent">{desc}</p>;
+                  data.descs.map((desc: string,index:number) => {
+                    return (
+                      <p key={index} className="clr-accent">
+                        {desc}
+                      </p>
+                    );
                   })}
             </div>
           </div>
