@@ -254,6 +254,9 @@ h6 {
 .clr-accent{
     color:var(--accent-color);
 }
+.bg-accent{
+    background-color:var(--accent-color);
+}
 
 @media  screen and (max-width:1140px) {
 }

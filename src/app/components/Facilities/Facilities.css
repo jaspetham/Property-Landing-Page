@@ -1,0 +1,27 @@
+.facility-info{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem .25rem;
+    width:100%;
+}
+
+.info-circle{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    color: white;
+}
+
+.extraImg{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+}
+
+@media  screen and (max-width:1140px) {
+    .facility-info{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
